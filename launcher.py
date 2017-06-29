@@ -43,7 +43,11 @@ while var == 1:
 
     if choice == '2':
         if useros == 'Windows':
+            print(os.getcwd())
+            os.chdir('master')
+            os.chdir('bin')
             os.system('autorestart.bat')
+            input('enter')
         else:
             print('Currently only supported on Windows.')
 
