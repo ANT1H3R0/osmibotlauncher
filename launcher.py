@@ -31,7 +31,7 @@ while var == 1:
     print('Select an option:')
     print('_____________________')
     print('1. Run Osmibot')
-    print('2. Run Osmibot with autorestart in case of errors.')
+    print('2. Become a whale')
     print('3. Install basic dependencies (no sound features)')
     print('4. Install all dependencies (recommended)')
     print('5. Configure Bot')
@@ -52,13 +52,9 @@ while var == 1:
             time.sleep(2)
 
     if choice == '2':
-        if useros == 'Windows':
-            print(os.getcwd())
-            os.chdir('master')
-            os.chdir('bin')
-            os.system('autorestart.bat')
-        else:
-            print('Currently only supported on Windows.')
+        os.system(clear)
+        print('What did you expect would happen?')
+        time.sleep(2)
 
     if choice == '3':
         os.system(clear)
