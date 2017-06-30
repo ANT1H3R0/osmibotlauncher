@@ -46,6 +46,7 @@ while var == 1:
                 os.system('python osmibot.py')
             except Exception:
                 os.system('python3 osmibot.py')
+            os.chdir('..')
         except Exception:
             print('Bot currently not downloaded. Install dependencies and use option 6.')
             time.sleep(2)
@@ -56,7 +57,6 @@ while var == 1:
             os.chdir('master')
             os.chdir('bin')
             os.system('autorestart.bat')
-            input('enter')
         else:
             print('Currently only supported on Windows.')
 
