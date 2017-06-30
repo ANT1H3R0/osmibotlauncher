@@ -86,13 +86,29 @@ while var == 1:
         tokendump = input("Enter your bot's token here: ")
         os.system(clear)
         clientdump = input("Enter your bot's client secret here: ")
+        os.system(clear)
+        ownerdump = input("Enter your user id here: ")
+        os.system(clear)
+        serverdump = input("Enter your server id here: ")
+        os.system(clear)
+        moddump = input("Enter the name of your mod role here: ")
+        os.system(clear)
+        admindump = input("Enter the name of your admin role here: ")
         data = {
             "token":tokendump,
             "client":clientdump
         }
+        perms = {
+            "ownerid":ownerdump,
+            "serverid":serverdump,
+            "modrole":moddump,
+            "adminrole":admindump
+        }
         os.chdir('master')
         with open('config.json', 'w') as f:
             json.dump(data, f)
+        with open('permissions.json', 'w') as p:
+            json.dump(perms, p)
         os.chdir('..')
         time.sleep(1)
 
