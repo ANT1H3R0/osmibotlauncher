@@ -41,7 +41,11 @@ while var == 1:
 
     if choice == '1':
         try:
-            import master.osmibot
+            os.chdir('master')
+            try:
+                os.system('python osmibot.py')
+            except Exception:
+                os.system('python3 osmibot.py')
         except Exception:
             print('Bot currently not downloaded. Install dependencies and use option 6.')
             time.sleep(2)
