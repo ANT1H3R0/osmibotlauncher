@@ -32,10 +32,11 @@ while var == 1:
     print('_____________________')
     print('1. Run Osmibot')
     print('2. Run Osmibot with autorestart in case of errors.')
-    print('3. Install dependencies')
-    print('4. Configure Bot')
-    print('5. Exit')
-    print('6. Update/Install Osmibot')
+    print('3. Install basic dependencies (no sound features)')
+    print('4. Install all dependencies (recommended)')
+    print('5. Configure Bot')
+    print('6. Exit')
+    print('7. Update/Install Osmibot')
     choice = input('Enter option number and press enter: ')
 
     if choice == '1':
@@ -53,10 +54,6 @@ while var == 1:
 
     if choice == '3':
         os.system(clear)
-        print('WARNING: The following commands will only succesfully run with')
-        print('admin privileges. If you are not running in administrator command')
-        print('prompt, please close this window and relaunch as such now, unless you are running MacOS, or Linux,')
-        print('in which case sudo will be prompted for at certain points in the installation.')
         print('Beginning install in 10 seconds.')
         time.sleep(10)
         os.system(clear)
@@ -66,6 +63,17 @@ while var == 1:
         time.sleep(3)
 
     if choice == '4':
+        os.system(clear)
+        print('Beginning install in 10 seconds.')
+        time.sleep(10)
+        os.system(clear)
+        print('Installing discord.py, PyNaCl and requirements...')
+        install('discord.py')
+        install('PyNaCl')
+        print('Installed dependencies!')
+        time.sleep(3)
+
+    if choice == '5':
         os.system(clear)
         tokendump = input("Enter your bot's token here: ")
         clientdump = input("Enter your bot's client secret here: ")
@@ -79,10 +87,10 @@ while var == 1:
         os.chdir('..')
         time.sleep(2)
 
-    if choice == '5':
+    if choice == '6':
         sys.exit()
 
-    if choice == '6':
+    if choice == '7':
         install('wget')
         import wget
         wget.download('https://github.com/ANT1H3R0/osmibot/archive/master.zip', 'master.zip')
