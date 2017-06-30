@@ -12,7 +12,7 @@ Upon completion, Osmibot will feature:
 
 # The Launcher
 The launcher can be used to easily create an instance of Osmibot that is ready to run.
-Its only prerequisites are Python 3.x and python-pip. All other dependencies can be installed using the launcher.
+Its only prerequisites are Python 3.4.2+ and python-pip. All other dependencies can be installed using the launcher.
 The latest stable release of the launcher can be downloaded in the releases section, and the current development build
 is available above. 
 
@@ -24,4 +24,4 @@ Option __1__ (or on Windows, __2__) cam then be used to launch the bot.
 # Currently Implemented Features
 The following features are currently availble to the bot:
 1. A fully fleshed out launcher that can be used to easily set up the bot.
-2. .ping and .die commands to test the function of the bot and to safely shut it down.
+2. `.ping` and `.die` commands to test the function of the bot and to safely shut it down.
