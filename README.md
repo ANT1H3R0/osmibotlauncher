@@ -24,4 +24,4 @@ Option __1__ (or on Windows, __2__) can then be used to launch the bot.
 # Currently Implemented Features
 The following features are currently availble to the bot:
 1. A fully fleshed out launcher that can be used to easily set up the bot.
-2. `.ping` and `.die` commands to test the function of the bot and to safely shut it down.
+2. `.ping` and `.die` commands to test the functionality of the bot and to safely shut it down.
