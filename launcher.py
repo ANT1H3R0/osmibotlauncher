@@ -25,8 +25,8 @@ def install(package):
     pip.main(['install', package])
 
 while var == 1:
-    os.system(clear)
     os.system(title)
+    os.system(clear)
     print('Osmibot Launcher v1.0')
     print('Select an option:')
     print('_____________________')
@@ -40,7 +40,11 @@ while var == 1:
     choice = input('Enter option number and press enter: ')
 
     if choice == '1':
-        import master.osmibot
+        try:
+            import master.osmibot
+        except Exception:
+            print('Bot currently not downloaded. Install dependencies and use option 6.')
+            time.sleep(2)
 
     if choice == '2':
         if useros == 'Windows':
@@ -76,6 +80,7 @@ while var == 1:
     if choice == '5':
         os.system(clear)
         tokendump = input("Enter your bot's token here: ")
+        os.system(clear)
         clientdump = input("Enter your bot's client secret here: ")
         data = {
             "token":tokendump,
@@ -85,7 +90,7 @@ while var == 1:
         with open('config.json', 'w') as f:
             json.dump(data, f)
         os.chdir('..')
-        time.sleep(2)
+        time.sleep(1)
 
     if choice == '6':
         sys.exit()
