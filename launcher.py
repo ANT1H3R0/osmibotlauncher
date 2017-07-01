@@ -9,6 +9,7 @@ import subprocess
 import zipfile
 
 useros = platform.system()
+pythonver = sys.version_info[0]
 var = 1
 
 if useros == 'Windows':
@@ -43,9 +44,9 @@ while var == 1:
     if choice == '1':
         try:
             os.chdir('master')
-            try:
+            if useros == 'Windows':
                 os.system('python osmibot.py')
-            except Exception:
+            else:
                 os.system('python3 osmibot.py')
             os.chdir('..')
         except Exception:
@@ -113,7 +114,10 @@ while var == 1:
         sys.exit()
 
     if choice == '7':
-        install('wget')
+        try:
+            install('wget')
+        except PermissionError:
+            print('Wget installation failed. Please run the launcher again as root.')
         import wget
         wget.download('https://github.com/ANT1H3R0/osmibot/archive/master.zip', 'master.zip')
         print('Downloaded')
