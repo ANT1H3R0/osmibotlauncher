@@ -37,6 +37,7 @@ while var == 1:
     print('5. Configure Bot')
     print('6. Exit')
     print('7. Update/Install Osmibot')
+    print('8. Launch cogloader')
     choice = input('Enter option number and press enter: ')
 
     if choice == '1':
@@ -121,6 +122,11 @@ while var == 1:
             zip_ref.extractall()
         os.rename('osmibot-master', 'master')
         os.remove('master.zip')
+
+    if choice == '8':
+        os.chdir('master')
+        os.system('python cogloader.py')
+        os.chdir('..')
 
     if choice == '1969':
         os.system(clear)
