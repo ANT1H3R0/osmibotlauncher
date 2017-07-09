@@ -17,8 +17,8 @@ The latest stable release of the launcher can be downloaded in the releases sect
 is available above. 
 
 After downloading and extracting the launcher, it can be run using the `launchgui.bat` file on Windows or using the
-command line on Linux or MacOS. First, click either of the options in the Dependencies to install dependencies for 
-the bot and then Setup -> Download Bot to download the bot. Afterwards, run Setup -> Configure Settings and enter your bot's token
+command line on Linux or MacOS. First, click either of the options in the `Dependencies` menu to install dependencies for 
+the bot and then `Setup -> Download Bot` to download the bot. Afterwards, run `Setup -> Configure Settings` and enter your bot's token
 and client secret, as well as other information. The center "Start" button can then be used to launch the bot.
 
 # Currently Implemented Features
