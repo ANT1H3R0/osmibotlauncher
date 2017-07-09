@@ -16,12 +16,14 @@ Its only prerequisites are Python 3.4.2+ and python-pip. All other dependencies 
 The latest stable release of the launcher can be downloaded in the releases section, and the current development build
 is available above. 
 
-After downloading and extracting the launcher, it can be run using the `launcher.bat` file on Windows or using the
-command line on Linux or MacOS. First, run option __4__ or __3__ to install dependencies for the bot and then __6__
-to download the bot. Afterwards, run option __5__ and enter your bot's token and client secret. 
-Option __1__ (or on Windows, __2__) can then be used to launch the bot.
+After downloading and extracting the launcher, it can be run using the `launchgui.bat` file on Windows or using the
+command line on Linux or MacOS. First, click either of the options in the Dependencies to install dependencies for 
+the bot and then Setup -> Download Bot to download the bot. Afterwards, run Setup -> Configure Settings and enter your bot's token
+and client secret, as well as other information. The center "Start" button can then be used to launch the bot.
 
 # Currently Implemented Features
 The following features are currently availble to the bot:
-1. A fully fleshed out launcher that can be used to easily set up the bot.
+1. A fully fleshed out launcher (__with GUI!__) that can be used to easily set up the bot.
 2. `.ping` and `.die` commands to test the functionality of the bot and to safely shut it down.
+3. Several Moderation tools such as kick and ban.
+4. Tools for managing the bot, including the ability to rename it.
