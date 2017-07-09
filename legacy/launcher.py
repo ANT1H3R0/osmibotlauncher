@@ -168,7 +168,10 @@ while var == 1:
 
     if choice == '8':
         os.chdir('master')
-        os.system('python cogloader.py')
+        if useros == 'Windows':
+            os.system('python cogloader.py')
+        else:
+            os.system('python3 cogloader.py')
         os.chdir('..')
 
     if choice == '1969':

@@ -47,12 +47,14 @@ class Launcher(Frame):
         setup = Menu(menu)
         setup.add_command(label='Configure Settings', command=self.config)
         setup.add_command(label='Download Bot', command=self.download)
+        setup.add_command(label='Cog Loader', command=self.cogloader)
         menu.add_cascade(label='Setup', menu=setup)
 
         deps = Menu(menu)
         deps.add_command(label='Install Basic Dependencies', command=self.basic)
         deps.add_command(label='Install All Dependencies', command=self.alldeps)
         menu.add_cascade(label='Dependencies', menu=deps)
+
 
         osmi = Label(self.master, text="Osmibot", font=("Arial", 36))
         osmi.place(x=100, y=75)
@@ -75,6 +77,14 @@ class Launcher(Frame):
             print('Bot currently not downloaded. Install dependencies and use option 6.')
             time.sleep(2)
         os.system(clear)
+
+    def cogloader(self):
+        os.chdir('master')
+        if useros == 'Windows':
+            os.system('python cogloader.py')
+        else:
+            os.system('python3 cogloader.py')
+        os.chdir('..')
 
     def config(self):
         messagebox.showinfo('Config', 'Config opened in console.')
